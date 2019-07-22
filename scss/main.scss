@@ -49,18 +49,32 @@
     }
 
     a {
+        position: relative;
         font-family: 'Montserrat', sans-serif;
         color: #fff;
         font-size: 14px;
         text-transform: uppercase;
         padding: 15px 0;
         margin-left: 55px;
-        border-bottom: 3px solid transparent;
         @include transition;
+
+        &::before {
+            content: '';
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background-color: $tertiaty-color;
+            @include transition;
+        }
 
         &:hover {
             color: $tertiaty-color;
-            border-bottom: 3px solid $tertiaty-color;
+            &::before {
+                width: 100%;
+                left: 0;
+            }
         }
     }
 }
@@ -179,14 +193,6 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: $gutter;
         padding-inline-start: 0px;
-
-        li {
-            &:hover {
-                .menu_line-up {
-                    opacity: 1;
-                }
-            }
-        }
     }
 }
 
@@ -194,14 +200,21 @@
     height: 3px;
     background-color: #fff;
     position: relative;
+}
 
-    &-up {
-        max-width: 70px;
-        height: 3px;
-        background-color: $secondary-color;
-        opacity: 0;
-        @include transition;
-    }
+.menu_line::before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: $secondary-color;
+    transition: 0.3s;
+}
+
+.menu_bottom-line li:hover .menu_line:before {
+    width: 70px;
 }
 
 .menu_text {

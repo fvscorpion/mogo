@@ -91,6 +91,10 @@
             border: none;
             margin: 0;
 
+            &::before {
+                content: none;
+            }
+
             &:hover {
                 background: #E56D68;
                 color: #fff;
