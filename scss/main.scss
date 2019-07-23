@@ -242,7 +242,7 @@
 .picture-item {
     position: relative;
     cursor: pointer;
-;
+
     transition: all 0.5s ease-in;
     opacity: 0;
     &.on {
@@ -367,7 +367,7 @@
 
     transition: all 0.5s ease-in;
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     &.on {
         opacity: 1;
         transform: translateY(0);
@@ -679,8 +679,8 @@
 
 .work-wrapper-left,
 .work-wrapper-right {
-    animation-duration: 2s;
-    animation-delay: .4s;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
 }
 
 .work-wrapper-right {
@@ -790,7 +790,7 @@
     
     transition: all 0.5s ease-in;
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     &.on {
         opacity: 1;
         transform: translateY(0);
