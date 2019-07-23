@@ -30,9 +30,11 @@ $(function() {
 	$(".about-us").waypoint(function() {
 		$(".pics-item").each(function(index) {
 			var ths = $(this);
-			setInterval(function() {
-				ths.addClass("on");
-			}, 500*index);
+			setTimeout(function() {
+				setInterval(function() {
+					ths.addClass("on");
+				}, 400*index);
+			}, 1000);
 		});
 	}, {
 		offset : "35%"
@@ -41,9 +43,11 @@ $(function() {
 	$(".services").waypoint(function() {
 		$(".service-item").each(function(index) {
 			var ths = $(this);
-			setInterval(function() {
-				ths.addClass("on");
-			}, 400*index);
+			setTimeout(function() {
+				setInterval(function() {
+					ths.addClass("on");
+				}, 400*index);
+			}, 300);
 		});
 	}, {
 		offset : "50%"
@@ -52,9 +56,11 @@ $(function() {
 	$(".team").waypoint(function() {
 		$(".team-item").each(function(index) {
 			var ths = $(this);
-			setInterval(function() {
-				ths.addClass("on");
-			}, 500*index);
+			setTimeout(function() {
+				setInterval(function() {
+					ths.addClass("on");
+				}, 400*index);
+			}, 1000);
 		});
 	}, {
 		offset : "40%"
@@ -63,9 +69,11 @@ $(function() {
 	$(".clients").waypoint(function() {
 		$(".client-item").each(function(index) {
 			var ths = $(this);
-			setInterval(function() {
-				ths.addClass("on");
-			}, 500*index);
+			setTimeout(function() {
+				setInterval(function() {
+					ths.addClass("on");
+				}, 400*index);
+			}, 400);
 		});
 	}, {
 		offset : "50%"
@@ -74,9 +82,11 @@ $(function() {
 	$(".blog").waypoint(function() {
 		$(".blog-item").each(function(index) {
 			var ths = $(this);
-			setInterval(function() {
-				ths.addClass("on");
-			}, 500*index);
+			setTimeout(function() {
+				setInterval(function() {
+					ths.addClass("on");
+				}, 400*index);
+			}, 400);
 		});
 	}, {
 		offset : "50%"
@@ -91,7 +101,7 @@ $(function() {
 				easing: 'easeInQuad',
 				numberStep: comma_separator_number_step
 			},
-			2000);
+			1200);
 		});
 	}, {
 		offset : "85%"
@@ -100,18 +110,18 @@ $(function() {
 	$(document).ready(function(){
 		$(".reviews-wrapper").owlCarousel({
 			items: 1,
-			loop:true,
-			margin:10,
-			autoHeight:true,
+			loop: true,
+			margin: 10,
+			autoHeight: true,
 			nav: true,
 			dots: false,
-			autoplay : true,
-			autoplayHoverPause : true,
-			fluidSpeed : 600,
-			autoplaySpeed : 600,
-			navSpeed : 600,
-			dotsSpeed : 600,
-			dragEndSpeed : 600,
+			autoplay: true,
+			autoplayHoverPause: true,
+			fluidSpeed: 600,
+			autoplaySpeed: 600,
+			navSpeed: 600,
+			dotsSpeed: 600,
+			dragEndSpeed: 600,
 			navText: ["<img src='img/arrow-left.png'>","<img src='img/arrow-right.png'>"]
 		});
 	});
